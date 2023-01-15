@@ -1,0 +1,17 @@
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
+
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+  /**
+   * Trang chủ
+   * @param res
+   * @returns
+   */
+  @Get()
+  getHello(): string {
+    return 'Hello World';
+  }
+}
